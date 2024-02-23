@@ -1,12 +1,12 @@
-package test;
+package test.demoqaTest;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import pages.RegistrationPage;
-import pages.SubmittedPage;
+import pages.demoQaPages.RegistrationPage;
+import pages.demoQaPages.SubmittedPage;
 import webComponents.Datepicker;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

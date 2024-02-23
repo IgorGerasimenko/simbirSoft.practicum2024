@@ -1,9 +1,10 @@
-package pages;
+package pages.demoQaPages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import pages.BasePage;
 
 public class RegistrationPage extends BasePage {
 
@@ -40,27 +41,27 @@ public class RegistrationPage extends BasePage {
         super(driver);
     }
 
-    public pages.RegistrationPage open() {
+    public RegistrationPage open() {
         driver.get(baseUrl);
         return this;
     }
 
-    public pages.RegistrationPage sendKeys(WebElement element, String value) {
+    public RegistrationPage sendKeys(WebElement element, String value) {
         element.sendKeys(value);
         return this;
     }
 
-    public pages.RegistrationPage clickElement(WebElement element) {
+    public RegistrationPage clickElement(WebElement element) {
         element.click();
         return this;
     }
 
-    public pages.RegistrationPage clickElementByText(String text) {
+    public RegistrationPage clickElementByText(String text) {
         driver.findElement(By.xpath("//*[contains(text(),'" + text + "')]")).click();
         return this;
     }
 
-    public pages.RegistrationPage uploadFile(String filePath) {
+    public RegistrationPage uploadFile(String filePath) {
         driver.findElement(By.xpath("//input[@id='uploadPicture']")).sendKeys(filePath);
         return this;
     }
